@@ -22,5 +22,5 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              labels: ["label_by_gzq", "auto_label"]
+              labels: ["gzq", "auto_label"]
             })
