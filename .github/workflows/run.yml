@@ -5,7 +5,7 @@ name: Demo
 
 # 触发条件,当提交新代码时
 on:
-  commits:
+  push
 
 
 # 执行的任务
