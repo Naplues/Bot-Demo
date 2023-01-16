@@ -1,6 +1,9 @@
 
+# action的名称
+name: Demo
 
-name: Label issues
+
+# 触发条件,当issues被打开或者重新打开时
 on:
   issues:
     types:
@@ -8,7 +11,10 @@ on:
       - opened
 
 
+# 执行的任务，共两个
 jobs:
+
+  # 任务一： 给该issue打上三个标签
   job1_label_issues:
     runs-on: ubuntu-latest
     
@@ -16,7 +22,7 @@ jobs:
       issues: write
     
     steps:
-      - uses: actions/github-script@v6
+      - uses: actions/github-script@v6  # 用到一个第三方编写的actions
         with:
           script: |
             github.rest.issues.addLabels({
@@ -26,9 +32,10 @@ jobs:
               labels: ["made_by_gzq", "auto_label", "bug"]
             })
 
+  # 任务二：给该issue添加一条注释
   job_2_add_comment:
     runs-on: ubuntu-latest
-    
+
     permissions:
       issues: write
 
@@ -38,4 +45,5 @@ jobs:
         with:
           issue-number: ${{ github.event.issue.number }}
           body: |
-            This issue is available for anyone to work on. :sparkles: Thank you for your contribution! :sparkles:
+            This issue is available for anyone to work on. :sparkles:
+            Thank you for your contribution! :sparkles:
