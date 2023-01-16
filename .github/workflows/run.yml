@@ -22,5 +22,3 @@ jobs:
         distribution: 'temurin' # See 'Supported distributions' for available options
         java-version: '17'
     - run: java Hello.java
-    - name: CodeGuru Reviewer
-      uses: aws-actions/codeguru-reviewer@v1.1
