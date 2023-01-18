@@ -1,6 +1,6 @@
 
 # action的名称
-name: Demo
+name: run
 
 
 # 触发条件,当提交新代码时
