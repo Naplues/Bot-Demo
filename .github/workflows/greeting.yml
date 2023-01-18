@@ -6,11 +6,11 @@ on:
     types: [created]
     
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/first-interaction@v1 
+  job_greeting:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/first-interaction@v1 
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }} 
           issue-message: ‘#The first issue msg.' 
-          pr-message: ‘The first pr msg.' 
+          pr-message: ‘The first pr msg.'
