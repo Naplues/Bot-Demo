@@ -1,6 +1,6 @@
 
 # action的名称
-name: Demo2
+name: issue_close
 
 
 # 触发条件,当issues被关闭时
