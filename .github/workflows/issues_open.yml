@@ -1,6 +1,6 @@
 
 # action的名称
-name: Demo
+name: issue_open
 
 
 # 触发条件,当issues被打开或者重新打开时
